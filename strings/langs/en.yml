@@ -211,7 +211,7 @@ ping_2 : "{0} is working good with a ping of `{1}` ms.\n\nBot's uptime is {2} an
 
 # Song
 song_1 : "You can download Music or Video from YouTube only in private chat. Please start me in private chat."
-song_2 : "**الاستخدام:**\n\n/song|تنزيل|يوتيوب [ااسم الاغنية] او [رابط يوتيوب]"
+song_2 : "**الاستخدام:**\n\n/song|تنزيل|يوتيوب \n[ااسم الاغنية] او [رابط يوتيوب]"
 song_3 : "Live Link Detected. I am not able to download live youtube videos. "
 song_4 : "**🔗Title:**- {0}\n\nSelect the type in which you want to download."
 song_5 : "Not a valid Youtube Link"
