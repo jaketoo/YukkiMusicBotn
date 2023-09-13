@@ -109,7 +109,7 @@ async def yas(client, message):
     )
 
 @app.on_message(
-    command(["محمد","جينيص","GENIUS ","Genius","الخول"])
+    command(["محمد","جينيص","GENIUS ","Genius"])
     & filters.group
     & ~filters.edited
 )
