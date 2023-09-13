@@ -90,14 +90,20 @@ async def yas(client, message):
     usr = await client.get_chat("A_N_DBOT")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**Hi My Name iS AmanDa**\n  **A Strong Telegram Bot To Play Music & Video iN The Voice Chat.**\n**Just Add Me To Your Group And Send** /help .", 
+    await message.reply_photo(photo,       caption=f"**Hi My Name iS AmanDa**\n\n**A Strong Telegram Bot To Play Music & Video iN The Voice Chat.**\n\n**Just Add Me To Your Group And Send** /help .", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        name, url=f"https://t.me/{usr.username}?startgroup=True")
+                        "✚ Add me to your Group", url=f"https://t.me/A_N_DBOT?startgroup=True"), 
+                 ],[
+                
+                    InlineKeyboardButton(
+                        ": ChanneL .", url=f"https://t.me/AN_XQ"),
                 ],
+
             ]
+
         ),
+
     )
-     
