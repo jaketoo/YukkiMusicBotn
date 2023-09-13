@@ -1,4 +1,4 @@
-import random
+random
 import string
 from ast import ExceptHandler
 
@@ -31,7 +31,7 @@ PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 
 @app.on_message(
-    filters.command(PLAY_COMMAND)
+    filters.command(["/play","/vplay","تشغيل","فيديو"],"")
     & ~filters.edited
     & ~BANNED_USERS
 )
