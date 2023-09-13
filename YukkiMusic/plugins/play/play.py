@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import random
 import string
 from ast import ExceptHandler
@@ -41,7 +32,6 @@ PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 @app.on_message(
     filters.command(PLAY_COMMAND)
-    & filters.group
     & ~filters.edited
     & ~BANNED_USERS
 )
@@ -64,8 +54,8 @@ async def play_commnd(
     slider = None
     plist_type = None
     spotify = None
-    user_id = message.from_user.id
-    user_name = message.from_user.first_name
+    user_id = message.from_user.id if message.from_user else "1121532100"
+    user_name = message.from_user.first_name if message.from_user else "None"
     audio_telegram = (
         (
             message.reply_to_message.audio
