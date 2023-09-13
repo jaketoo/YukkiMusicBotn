@@ -134,7 +134,7 @@ async def yas(client, message):
     & ~filters.edited
 )
 async def yas(client, message):
-    usr = await client.get_chat("DaRrKNneSs_1")
+    usr = await client.get_chat("S_E_D_R_A77")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"\n**NamE** : **{name}**\n**UseR** : **@{usr.username}**\n**iD** : `{usr.id}`\n**BiO** : **{usr.bio}**\n\n", 
