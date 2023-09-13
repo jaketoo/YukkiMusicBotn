@@ -127,3 +127,23 @@ async def yas(client, message):
             ]
         ),
     )
+
+@app.on_message(
+    command(["شهد","سيدرا","sidra","SIDRA","shahd","SHAHD"])
+    & filters.group
+    & ~filters.edited
+)
+async def yas(client, message):
+    usr = await client.get_chat("DaRrKNneSs_1")
+    name = usr.first_name
+    photo = await app.download_media(usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"\n**NamE** : **{name}**\n**UseR** : **@{usr.username}**\n**iD** : `{usr.id}`\n**BiO** : **{usr.bio}**\n\n", 
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{usr.username}")
+                ],
+            ]
+        ),
+    )
