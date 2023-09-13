@@ -30,7 +30,7 @@ SONG_COMMAND = get_command("SONG_COMMAND")
 
 @app.on_message(
     filters.command(["/song","/vedio","تنزيل","يوتيوب","يوت"],"")
-    & filters.private
+    & filters.group
     & ~filters.edited
     & ~BANNED_USERS
 )
