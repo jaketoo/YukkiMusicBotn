@@ -1,4 +1,4 @@
-random
+import random
 import string
 from ast import ExceptHandler
 
